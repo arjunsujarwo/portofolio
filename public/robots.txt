@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portofolio-one-lemon-88.vercel.app/sitemap.xml
