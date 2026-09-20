@@ -777,15 +777,43 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
+                  whileHover={
+                    shouldReduceMotion
+                      ? undefined
+                      : {
+                          scale: 1.025,
+                          rotate: 1.2,
+                          y: -6,
+                        }
+                  }
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
+                  style={{ transformPerspective: 900 }}
                   className="relative aspect-[3/4] overflow-hidden rounded-t-[11rem] border-x-[7px] border-t-[7px] border-white/90 bg-[#d9e5ea] shadow-2xl"
                 >
-                  <img
+                  <motion.img
                     src="/images/profile/image1.png"
                     alt="Arjun Sujarwo"
+                    whileHover={
+                      shouldReduceMotion ? undefined : { scale: 1.08 }
+                    }
+                    transition={{ duration: 0.7, ease: easePremium }}
                     className="h-full w-full object-cover object-top"
                   />
 
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#10243e]/10 via-transparent to-white/5" />
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    whileHover={
+                      shouldReduceMotion
+                        ? undefined
+                        : { opacity: 1, y: 0 }
+                    }
+                    transition={{ duration: 0.3 }}
+                    className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full border border-white/60 bg-[#10243e]/85 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white shadow-lg backdrop-blur-md"
+                  >
+                    Explore my profile
+                  </motion.div>
 
                   {/* Cinematic light sweep */}
                   <motion.div
