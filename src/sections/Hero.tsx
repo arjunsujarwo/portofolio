@@ -619,7 +619,41 @@ export default function Hero() {
               className="relative min-h-[530px] overflow-hidden rounded-[2.5rem] border border-slate-200 bg-[#eaf7fd] shadow-2xl shadow-slate-900/10 md:min-h-[610px]"
             >
               {/* Sky */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#aee2f7] via-[#eaf7fd] to-white" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.95),transparent_24%),radial-gradient(circle_at_85%_28%,rgba(59,130,246,0.24),transparent_28%),linear-gradient(145deg,#b8e9f8_0%,#eaf7fd_48%,#f8f4ef_100%)]" />
+
+              <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(rgba(16,36,62,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(16,36,62,0.08) 1px, transparent 1px)",
+                  backgroundSize: "34px 34px",
+                  maskImage:
+                    "linear-gradient(to bottom, black 0%, transparent 72%)",
+                }}
+              />
+
+              <motion.div
+                animate={
+                  shouldReduceMotion
+                    ? undefined
+                    : { x: [0, 18, 0], y: [0, -10, 0], scale: [1, 1.08, 1] }
+                }
+                transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -right-16 top-16 h-56 w-56 rounded-full bg-[#3b82f6]/20 blur-3xl"
+              />
+
+              <motion.div
+                animate={
+                  shouldReduceMotion
+                    ? undefined
+                    : { x: [0, -14, 0], y: [0, 12, 0] }
+                }
+                transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[-4rem] top-[34%] h-44 w-44 rounded-full bg-[#87ceeb]/35 blur-2xl"
+              />
+
+              <div className="absolute right-8 top-28 h-36 w-36 rounded-full border border-white/60" />
+              <div className="absolute right-14 top-[8.5rem] h-24 w-24 rounded-full border border-white/40" />
 
               {/* Sun */}
               <motion.div
