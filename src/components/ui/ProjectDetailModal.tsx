@@ -110,44 +110,19 @@ export default function ProjectDetailModal({
                       </div>
                     </div>
 
-                    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#eaf7fd]">
-                      <div className="relative aspect-video">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#bde8fa] via-[#eaf7fd] to-[#f3ece8]" />
-
-                        <div className="absolute inset-6 rounded-xl border border-white/80 bg-white/75 p-4 shadow-lg backdrop-blur-sm">
-                          <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-                            <div className="h-2 w-2 rounded-full bg-[#8b6e63]" />
-                            <div className="h-2 w-2 rounded-full bg-[#87ceeb]" />
-                            <div className="h-2 w-2 rounded-full bg-[#10243e]" />
-
-                            <div className="ml-auto h-2 w-20 rounded-full bg-slate-200" />
-                          </div>
-
-                          <div className="mt-5 grid grid-cols-[70px_1fr] gap-4">
-                            <div className="space-y-2">
-                              <div className="h-3 rounded bg-[#10243e]/10" />
-                              <div className="h-3 rounded bg-[#10243e]/10" />
-                              <div className="h-3 rounded bg-[#3b82f6]/30" />
-                              <div className="h-3 rounded bg-[#10243e]/10" />
-                            </div>
-
-                            <div>
-                              <div className="h-20 rounded-xl bg-[#10243e]/10" />
-
-                              <div className="mt-3 grid grid-cols-3 gap-2">
-                                <div className="h-10 rounded-lg bg-[#3b82f6]/20" />
-                                <div className="h-10 rounded-lg bg-[#8b6e63]/20" />
-                                <div className="h-10 rounded-lg bg-[#10243e]/10" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#eaf7fd] p-3 sm:p-5">
+                      <div className="flex min-h-[220px] items-center justify-center rounded-xl bg-white p-2 sm:min-h-[300px]">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} preview`}
+                          className="max-h-[420px] w-full rounded-lg object-contain"
+                        />
                       </div>
                     </div>
 
                     {/* Future Gallery */}
                     {project.gallery && project.gallery.length > 0 && (
-                      <div className="mt-4 grid grid-cols-3 gap-3">
+                      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
                         {project.gallery.map((image) => (
                           <div
                             key={image}
@@ -156,7 +131,7 @@ export default function ProjectDetailModal({
                             <img
                               src={image}
                               alt={`${project.title} screenshot`}
-                              className="h-full w-full object-cover"
+                              className="h-full w-full object-contain p-1"
                             />
                           </div>
                         ))}
@@ -248,7 +223,7 @@ export default function ProjectDetailModal({
                             href={project.github}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center justify-between rounded-xl bg-[#10243e] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#3b82f6]"
+                            className="inline-flex items-center justify-between rounded-xl bg-[#10243e] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d4ed8]"
                           >
                             <span className="flex items-center gap-2">
                               <GitBranch size={16} />

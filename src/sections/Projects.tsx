@@ -41,7 +41,7 @@ export default function Projects() {
         </div>
 
         {/* Project Grid */}
-        <div className="mt-14 grid gap-7 lg:grid-cols-2">
+        <div className="mt-14 grid gap-7">
           {projects.map((project, index) => (
             <motion.article
               key={project.id}
@@ -52,62 +52,22 @@ export default function Projects() {
                 duration: 0.6,
                 delay: index * 0.08,
               }}
-              className={`group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 ${
-                index === 0 ? "lg:col-span-2" : ""
-              }`}
+              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10"
             >
-              <div
-                className={`grid ${
-                  index === 0
-                    ? "lg:grid-cols-[1.05fr_0.95fr]"
-                    : "grid-cols-1"
-                }`}
-              >
+              <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
                 {/* ========================================
                     PROJECT IMAGE / VISUAL
                 ======================================== */}
-                <div
-                  className={`relative overflow-hidden bg-[#eaf7fd] ${
-                    index === 0
-                      ? "min-h-[320px] lg:min-h-[400px]"
-                      : "min-h-[250px]"
-                  }`}
-                >
+                <div className="relative min-h-[280px] overflow-hidden bg-[#eaf7fd] lg:min-h-[400px]">
                   {/* Decorative background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#bde8fa] via-[#eaf7fd] to-[#f3ece8]" />
 
-                  {/* Abstract UI */}
-                  <div className="absolute inset-8 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-xl backdrop-blur-sm">
-                    {/* Browser header */}
-                    <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-                      <div className="h-2 w-2 rounded-full bg-[#8b6e63]" />
-                      <div className="h-2 w-2 rounded-full bg-[#87ceeb]" />
-                      <div className="h-2 w-2 rounded-full bg-[#10243e]" />
-
-                      <div className="ml-auto h-2 w-16 rounded-full bg-slate-200" />
-                    </div>
-
-                    {/* Abstract dashboard */}
-                    <div className="mt-5 grid grid-cols-[80px_1fr] gap-4">
-                      {/* Sidebar */}
-                      <div className="space-y-2">
-                        <div className="h-3 rounded bg-[#10243e]/10" />
-                        <div className="h-3 rounded bg-[#10243e]/10" />
-                        <div className="h-3 rounded bg-[#3b82f6]/30" />
-                        <div className="h-3 rounded bg-[#10243e]/10" />
-                      </div>
-
-                      {/* Content */}
-                      <div>
-                        <div className="h-20 rounded-xl bg-[#10243e]/10" />
-
-                        <div className="mt-3 grid grid-cols-3 gap-2">
-                          <div className="h-12 rounded-lg bg-[#3b82f6]/20" />
-                          <div className="h-12 rounded-lg bg-[#8b6e63]/20" />
-                          <div className="h-12 rounded-lg bg-[#10243e]/10" />
-                        </div>
-                      </div>
-                    </div>
+                  <div className="absolute inset-5 flex items-center justify-center rounded-2xl border border-white/70 bg-white/70 p-3 shadow-xl backdrop-blur-sm sm:inset-8 sm:p-4">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="h-full w-full rounded-xl object-contain"
+                    />
                   </div>
 
                   {/* Project Number */}
