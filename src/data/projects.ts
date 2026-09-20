@@ -55,4 +55,42 @@ hkiUrl: "/documents/hki/smart-eco-bank-hki.pdf",
 
   github: "",
   demo: "",
-}];
+ },
+{
+    id: "pos-umkm-offline",
+    title: "POS UMKM Offline",
+    category: "Desktop & Mobile Application",
+    year: "2026",
+    shortDescription:
+      "Aplikasi kasir offline untuk membantu UMKM mengelola produk, stok, transaksi, pembayaran, laporan, dan cetak struk.",
+    description:
+      "POS UMKM Offline adalah aplikasi Point of Sale berbasis Flutter yang dirancang agar operasional toko tetap berjalan tanpa koneksi internet. Data transaksi tersimpan lokal di perangkat, dengan alur kasir yang responsif untuk Windows, Android phone, dan tablet.",
+    role: "Full-stack Developer",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Provider",
+      "SQLite",
+      "QRIS",
+      "PDF & Printing",
+      "Excel Export",
+    ],
+    features: [
+      "Dashboard penjualan dan produk terlaris",
+      "Katalog produk, kategori, foto, dan stok",
+      "Pembayaran tunai, QRIS, dan multi-rekening bank",
+      "Detail transaksi dan cetak ulang struk",
+      "Laporan penjualan Excel",
+      "Backup dan restore database lokal",
+      "Responsive navigation untuk desktop dan mobile",
+    ],
+    image: "/images/projects/project-02/pos-umkm-dashboard.png",
+    gallery: [
+      "/images/projects/project-02/pos-umkm-dashboard.png",
+      "/images/projects/project-02/pos-umkm-logo.png",
+    ],
+    github: "https://github.com/arjunsujarwo/pos-umkm-offline-flutter",
+    demo:
+      "https://github.com/arjunsujarwo/pos-umkm-offline-flutter/releases/latest",
+  },
+];
