@@ -223,7 +223,7 @@ export default function ProjectDetailModal({
                             href={project.github}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center justify-between rounded-xl bg-[#10243e] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d4ed8]"
+                            className="inline-flex items-center justify-between rounded-xl bg-[#10243e] px-4 py-3 text-sm font-semibold !text-white shadow-sm transition hover:bg-[#1d4ed8] [&_*]:!text-white"
                           >
                             <span className="flex items-center gap-2">
                               <GitBranch size={16} />
